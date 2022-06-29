@@ -16,7 +16,8 @@
         crossorigin="anonymous">
 </head>
 
-<body>
+<body class="p-3 mb-2 bg-secondary text-white">
+
 <div class="container">
   <% flash.each do |name, msg| %>
     <%= content_tag(:div, msg, class: "alert alert-info") %>
@@ -27,5 +28,6 @@
 <div class="container">
   <%= yield %>
 </div>
+
 </body>
 </html>

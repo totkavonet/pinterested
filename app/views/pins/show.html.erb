@@ -1,9 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @pin.description %>
-</p>
 
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<%= link_to 'Back', pins_path %>
+<div class="card text-white bg-dark mb-3">
+  <div class="card-header"><h2>Description:</h2></div>
+  <div class="card-body">
+
+    <div class="form-group">
+      <%= @pin.description %>
+    </div>
+
+  </div>
+
+  <div class="card-footer">
+    <%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-primary" %>
+    <%= link_to 'Back', pins_path, class: "btn btn-secondary" %>
+  </div>
+
+</div>
