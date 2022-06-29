@@ -1,6 +1,6 @@
 <br>
 
-<div class="card text-white bg-dark mb-3">
+<div class="card text-white bg-dark border-light mb-3">
   <div class="card-header"><h2>Edit <%= resource_name.to_s.humanize %></h2></div>
   <div class="card-body">
 
@@ -42,13 +42,16 @@
     <%= link_to "Back", :back %>
   </div>
 
-  <br>
-  <div class="card text-white bg-dark mb-3">
-    <div class="card-header"><h3>Cancel my account</h3></div>
-  </div>
 
+
+</div>
+
+<br>
+<div class="card text-white bg-dark border-danger mb-3">
+  <div class="card-header"><h3>Cancel my account</h3></div>
   <div class="card-body">
     <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
   </div>
 
 </div>
+
