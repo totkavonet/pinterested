@@ -1,8 +1,8 @@
-<%= form_with(model: pin) do |form| %>
+<%= form_for @pin, html: { multipart: true } do |f| %>
+
   <% if pin.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(pin.errors.count, "error") %> prohibited this pin from being saved:</h2>
-
       <ul>
         <% pin.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -12,10 +12,17 @@
   <% end %>
 
   <div class="card-body">
-    <%= form.label :description, class: 'form-group' %>
-    <%= form.text_field :description, class: 'form-control' %>
+    <%= f.label :description, class: 'form-group' %>
+    <%= f.text_field :description, class: 'form-control' %>
     <br>
-    <%= form.submit class: "btn btn-primary" %>
+
+    <div class="form-group">
+      <%= f.label :image %>
+      <%= f.file_field :image, class: "form-control" %>
+    </div>
+
+    <br>
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 
 <% end %>
