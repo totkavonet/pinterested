@@ -13,18 +13,19 @@
       <th scope="col">
       <th>Description</th>
       </th>
-      <th colspan="3"></th>
+<!--      <th colspan="3"></th>-->
     </tr>
     </thead>
 
     <tbody>
     <% @pins.each do |pin| %>
       <tr>
-        <th scope="row">1</th>
         <td><%= pin.description %></td>
         <td><%= link_to 'Show', pin %></td>
-        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if pin.user == current_user %>
+          <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
+          <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
     </tbody>
