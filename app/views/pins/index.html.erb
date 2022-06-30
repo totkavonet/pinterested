@@ -21,3 +21,10 @@
       </div>
   <% end %>
 
+<br>
+<nav aria-label="Page navigation example">
+  <ul class="pagination pagination-sm justify-content-center pagination-bg">
+    <%= will_paginate @pins, renderer: WillPaginate::ActionView::BootstrapLinkRenderer   %>
+  </ul>
+</nav>
+

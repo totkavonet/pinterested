@@ -30,6 +30,10 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'paperclip', '~> 6.1'
 gem 'aws-sdk', '~> 3.1'
+gem 'will_paginate', '~> 3.3', '>= 3.3.1'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
+gem 'will_paginate-bootstrap-style'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
